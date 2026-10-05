@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3C1D5E7-2B4F-4C68-9D01-7E8F5A6B3C24}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MediTrack</RootNamespace>
+    <AssemblyName>MediTrack</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Area.cs" />
+    <Compile Include="Entities\Justificacion.cs" />
+    <Compile Include="Entities\Personal.cs" />
+    <Compile Include="Entities\RegistroAsistencia.cs" />
+    <Compile Include="Entities\Reportes.cs" />
+    <Compile Include="Entities\Turno.cs" />
+    <Compile Include="Forms\FormAreas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAreas.Designer.cs">
+      <DependentUpon>FormAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormGraficos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGraficos.Designer.cs">
+      <DependentUpon>FormGraficos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormJornadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormJornadas.Designer.cs">
+      <DependentUpon>FormJornadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormJustificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormJustificaciones.Designer.cs">
+      <DependentUpon>FormJustificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMarcacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMarcacion.Designer.cs">
+      <DependentUpon>FormMarcacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPersonal.Designer.cs">
+      <DependentUpon>FormPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormReportes.Designer.cs">
+      <DependentUpon>FormReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTurnos.Designer.cs">
+      <DependentUpon>FormTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UI.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Repositories\AreaRepository.cs" />
+    <Compile Include="Repositories\AsistenciaRepository.cs" />
+    <Compile Include="Repositories\IAreaRepository.cs" />
+    <Compile Include="Repositories\IAsistenciaRepository.cs" />
+    <Compile Include="Repositories\IJustificacionRepository.cs" />
+    <Compile Include="Repositories\IPersonalRepository.cs" />
+    <Compile Include="Repositories\IRepositorio.cs" />
+    <Compile Include="Repositories\ITurnoRepository.cs" />
+    <Compile Include="Repositories\JustificacionRepository.cs" />
+    <Compile Include="Repositories\PersonalRepository.cs" />
+    <Compile Include="Repositories\RepositorioMemoria.cs" />
+    <Compile Include="Repositories\TurnoRepository.cs" />
+    <Compile Include="Services\AreaService.cs" />
+    <Compile Include="Services\AsistenciaService.cs" />
+    <Compile Include="Services\Ayudas.cs" />
+    <Compile Include="Services\JustificacionService.cs" />
+    <Compile Include="Services\PersonalService.cs" />
+    <Compile Include="Services\ReporteService.cs" />
+    <Compile Include="Services\Sesion.cs" />
+    <Compile Include="Services\TurnoService.cs" />
+    <Compile Include="Services\Validador.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\FormAreas.resx">
+      <DependentUpon>FormAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGraficos.resx">
+      <DependentUpon>FormGraficos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormJornadas.resx">
+      <DependentUpon>FormJornadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormJustificaciones.resx">
+      <DependentUpon>FormJustificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMarcacion.resx">
+      <DependentUpon>FormMarcacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPersonal.resx">
+      <DependentUpon>FormPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormReportes.resx">
+      <DependentUpon>FormReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTurnos.resx">
+      <DependentUpon>FormTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
