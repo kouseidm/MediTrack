@@ -1,5 +1,5 @@
 # ⏱️MediTrack 
-**Meditrack** es un sistema de escritorio (C# y Windows Forms) para controlar la asistencia del personal de una clínica: registra ingresos y salidas, calcula tardanzas y genera reportes para Recursos Humanos.
+**Meditrack** es un sistema de escritorio (C# y Windows Forms) para controlar la asistencia del personal de una clínica: registra ingresos y salidas,calcula tardanzas y genera reportes para Recursos Humanos.
 
 ## Integrantes del proyecto
 - Huamán Flores, Alexis Miguel
