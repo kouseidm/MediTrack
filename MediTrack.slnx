@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Datos/Datos.csproj" Id="2a194972-6d47-4631-82df-e5eaf8a1d858" />
+  <Project Path="Negocio/Negocio.csproj" Id="355b33d5-c29c-4cdb-a770-7c16c1060bdd" />
+  <Project Path="Presentacion/Presentacion.csproj" Id="0f472bed-f370-46a8-9063-be34e65cc7ef" />
+</Solution>
