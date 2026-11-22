@@ -27,22 +27,16 @@ namespace Negocio
                 texto = "";
             }
             texto = texto.Trim().ToLower();
-            return objDatos.ObtenerTodos().Where(p => p.Codigo.ToLower().Contains(texto)
-                                                   || p.Nombres.ToLower().Contains(texto)
-                                                   || p.Apellidos.ToLower().Contains(texto)
-                                                   || p.Usuario.ToLower().Contains(texto)).ToList();
+            return objDatos.ObtenerTodos().Where(p => p.Codigo.ToLower().Contains(texto)|| p.Nombres.ToLower().Contains(texto)|| p.Apellidos.ToLower().Contains(texto)|| p.Usuario.ToLower().Contains(texto)).ToList();
         }
         public Personal ValidarLogin(string usuario, string clave)
         {
-            Personal empleadoEncontrado = objDatos.Buscar(usuario, clave);
-            if (empleadoEncontrado == null)
-            {
+            Personal trabajador = objDatos.Buscar(usuario);
+            if (trabajador == null)
                 return null;
-            }
-            else
-            {
-                return empleadoEncontrado;
-            }
+
+            bool claveCorrecta = NServicioPassword.Verificar(clave, trabajador.Password);
+            return claveCorrecta ? trabajador : null;
         }
 
         public string Registrar(Personal personal)
@@ -66,6 +60,10 @@ namespace Negocio
             if (personal.Password == "" || personal.Password == null)
             {
                 return "La contraseña es obligatoria.";
+            }
+            if (personal.Password.Length < 8)
+            {
+                return "La contraseña debe tener al menos 8 caracteres.";
             }
             if (personal.Rol == "" || personal.Rol == null)
             {
@@ -92,6 +90,7 @@ namespace Negocio
             personal.CreadoPor = NSesion.NombreUsuario;
             personal.ModificadoPor = NSesion.NombreUsuario;
             personal.Activo = true;
+            personal.Password = NServicioPassword.CrearHash(personal.Password);
 
             objDatos.Agregar(personal);
             return "";
@@ -138,8 +137,16 @@ namespace Negocio
                 return "Ese nombre de usuario ya está siendo usado por otra persona.";
             }
 
+            if (!string.IsNullOrEmpty(personal.Password) && personal.Password.Length < 8)
+            {
+                return "La contraseña debe tener al menos 8 caracteres.";
+            }
+
             personal.FechaModificacion = DateTime.Now;
             personal.ModificadoPor = NSesion.NombreUsuario;
+
+            if (!string.IsNullOrEmpty(personal.Password))
+                personal.Password = NServicioPassword.CrearHash(personal.Password);
 
             objDatos.Actualizar(personal);
 

@@ -57,6 +57,7 @@
     <Compile Include="NPersonal.cs" />
     <Compile Include="NReporte.cs" />
     <Compile Include="NSesion.cs" />
+    <Compile Include="NServicioPassword.cs" />
     <Compile Include="NTurno.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
