@@ -2,7 +2,7 @@
 
 **MediTrack** es un sistema de escritorio (C# y Windows Forms) para controlar la asistencia del personal de una clínica. Registra ingresos y salidas, calcula tardanzas, gestiona justificaciones y genera reportes para Recursos Humanos.
 
-> Versión 2 – Hito 01. La versión anterior (proyecto parcial) está en la rama `v1-Parcial`.
+> Versión 2 – Hito 02.
 
 ## Integrantes del proyecto
 - Huamán Flores, Alexis Miguel
@@ -21,10 +21,14 @@
 La solución `MediTrack.slnx` tiene tres proyectos.
 
 - `Datos/` Acceso a datos. Contiene el modelo de Entity Framework y una clase por entidad: `DArea`, `DTurno`, `DPersonal`, `DAsistencia` y `DJustificacion`.
-- `Negocio/` Reglas del sistema. Cada clase usa su clase de datos: `NArea`, `NTurno`, `NPersonal`, `NAsistencia`, `NJustificacion`, `NReporte` y `NSesion`.
+- `Negocio/` Reglas del sistema. Cada clase usa su clase de datos: `NArea`, `NTurno`, `NPersonal`, `NAsistencia`, `NJustificacion`, `NReporte`, `NSesion` y `NServicioPassword`.
 - `Presentacion/` Pantallas (Windows Forms). Es el proyecto de inicio.
 
 Las entidades del modelo son `Area`, `Turno`, `Personal`, `RegistroAsistencia` y `Justificacion`. Todas guardan datos de auditoría (fechas de creación y modificación, y quién las hizo).
+
+## Contraseñas
+- Las contraseñas nuevas se guardan como hash PBKDF2-SHA256 dentro del campo `Password` existente; el usuario continúa escribiendo su contraseña normal.
+- No se agregaron columnas ni se modificó la estructura de la base de datos. Las contraseñas existentes fueron migradas usando temporalmente el formato `usuario + "123"`.
 
 ## Cómo ejecutarlo
 1. Abre SQL Server Management Studio y ejecuta el archivo `SCRIPT MEDITRACK + DATOS.sql`. Crea la base de datos `dbMediTrack`, sus tablas, procedimientos almacenados y datos de ejemplo.
@@ -41,7 +45,7 @@ Las entidades del modelo son `Area`, `Turno`, `Personal`, `RegistroAsistencia` y
 La base trae 52 personas, 305 registros de asistencia y justificaciones de ejemplo, para que los reportes y gráficos ya muestren datos.
 
 ## Módulos
-- **Login:** valida usuario y contraseña. Solo entran usuarios activos.
+- **Login:** valida usuario y contraseña contra el hash guardado. Solo entran usuarios activos.
 - **Menú principal:** muestra el nombre y rol de quien inició sesión. Los menús Mantenimiento y Jornadas solo se ven para Administrador y RRHH.
 - **Marcar asistencia:** el personal escribe su código para registrar ingreso o salida.
 - **Mantenimiento:** Personal, Áreas y Turnos (registrar, modificar, activar y desactivar).
