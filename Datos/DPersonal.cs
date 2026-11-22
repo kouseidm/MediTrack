@@ -16,12 +16,11 @@ namespace Datos
             }
         }
 
-        public Personal Buscar(string usuario, string claveCifrada)
+        public Personal Buscar(string usuario)
         {
             using (var context = new dbMediTrackEntities())
             {
                 return context.Personal.FirstOrDefault(p => p.Usuario == usuario
-                                                         && p.Password == claveCifrada
                                                          && p.Activo);
             }
         }

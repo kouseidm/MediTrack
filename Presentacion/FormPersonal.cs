@@ -168,6 +168,8 @@ namespace Presentacion
             }
             LeerFormulario(p);
 
+            p.Password = null;
+
             if (Validador.TieneTexto(txtClave.Text))
             {
                 p.Password = txtClave.Text;
