@@ -33,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.gbProgramacion = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbArea = new System.Windows.Forms.ComboBox();
             this.lblPersonal = new System.Windows.Forms.Label();
             this.cmbPersonal = new System.Windows.Forms.ComboBox();
             this.lblFecha = new System.Windows.Forms.Label();
@@ -41,6 +43,8 @@
             this.btnProgramar = new System.Windows.Forms.Button();
             this.btnMasivo = new System.Windows.Forms.Button();
             this.grid = new System.Windows.Forms.DataGridView();
+            this.btnVerTodo = new System.Windows.Forms.Button();
+            this.btnVerTodos = new System.Windows.Forms.Button();
             this.gbProgramacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +63,8 @@
             // 
             // gbProgramacion
             // 
+            this.gbProgramacion.Controls.Add(this.label2);
+            this.gbProgramacion.Controls.Add(this.cmbArea);
             this.gbProgramacion.Controls.Add(this.lblPersonal);
             this.gbProgramacion.Controls.Add(this.cmbPersonal);
             this.gbProgramacion.Controls.Add(this.lblFecha);
@@ -68,10 +74,28 @@
             this.gbProgramacion.Controls.Add(this.btnMasivo);
             this.gbProgramacion.Location = new System.Drawing.Point(25, 77);
             this.gbProgramacion.Name = "gbProgramacion";
-            this.gbProgramacion.Size = new System.Drawing.Size(810, 110);
+            this.gbProgramacion.Size = new System.Drawing.Size(810, 167);
             this.gbProgramacion.TabIndex = 18;
             this.gbProgramacion.TabStop = false;
             this.gbProgramacion.Text = "Programación";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Area:";
+            // 
+            // cmbArea
+            // 
+            this.cmbArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbArea.FormattingEnabled = true;
+            this.cmbArea.Location = new System.Drawing.Point(100, 68);
+            this.cmbArea.Name = "cmbArea";
+            this.cmbArea.Size = new System.Drawing.Size(424, 21);
+            this.cmbArea.TabIndex = 8;
             // 
             // lblPersonal
             // 
@@ -108,7 +132,7 @@
             this.btnVerJornadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerJornadas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerJornadas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnVerJornadas.Location = new System.Drawing.Point(554, 66);
+            this.btnVerJornadas.Location = new System.Drawing.Point(554, 112);
             this.btnVerJornadas.Name = "btnVerJornadas";
             this.btnVerJornadas.Size = new System.Drawing.Size(235, 32);
             this.btnVerJornadas.TabIndex = 6;
@@ -131,7 +155,7 @@
             this.btnProgramar.FlatAppearance.BorderSize = 0;
             this.btnProgramar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProgramar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnProgramar.Location = new System.Drawing.Point(15, 66);
+            this.btnProgramar.Location = new System.Drawing.Point(18, 112);
             this.btnProgramar.Name = "btnProgramar";
             this.btnProgramar.Size = new System.Drawing.Size(235, 32);
             this.btnProgramar.TabIndex = 4;
@@ -146,7 +170,7 @@
             this.btnMasivo.FlatAppearance.BorderSize = 0;
             this.btnMasivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMasivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnMasivo.Location = new System.Drawing.Point(289, 66);
+            this.btnMasivo.Location = new System.Drawing.Point(289, 112);
             this.btnMasivo.Name = "btnMasivo";
             this.btnMasivo.Size = new System.Drawing.Size(235, 32);
             this.btnMasivo.TabIndex = 5;
@@ -184,20 +208,51 @@
             this.grid.DefaultCellStyle = dataGridViewCellStyle3;
             this.grid.EnableHeadersVisualStyles = false;
             this.grid.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.grid.Location = new System.Drawing.Point(25, 202);
+            this.grid.Location = new System.Drawing.Point(25, 250);
             this.grid.MultiSelect = false;
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
             this.grid.RowHeadersVisible = false;
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid.Size = new System.Drawing.Size(810, 449);
+            this.grid.Size = new System.Drawing.Size(810, 369);
             this.grid.TabIndex = 19;
+            // 
+            // btnVerTodo
+            // 
+            this.btnVerTodo.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnVerTodo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerTodo.FlatAppearance.BorderSize = 0;
+            this.btnVerTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerTodo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnVerTodo.Location = new System.Drawing.Point(-357, 625);
+            this.btnVerTodo.Name = "btnVerTodo";
+            this.btnVerTodo.Size = new System.Drawing.Size(157, 21);
+            this.btnVerTodo.TabIndex = 38;
+            this.btnVerTodo.Text = "VER TODOS";
+            this.btnVerTodo.UseVisualStyleBackColor = false;
+            // 
+            // btnVerTodos
+            // 
+            this.btnVerTodos.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnVerTodos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerTodos.FlatAppearance.BorderSize = 0;
+            this.btnVerTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerTodos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnVerTodos.Location = new System.Drawing.Point(675, 625);
+            this.btnVerTodos.Name = "btnVerTodos";
+            this.btnVerTodos.Size = new System.Drawing.Size(157, 21);
+            this.btnVerTodos.TabIndex = 36;
+            this.btnVerTodos.Text = "VER TODOS";
+            this.btnVerTodos.UseVisualStyleBackColor = false;
+            this.btnVerTodos.Click += new System.EventHandler(this.btnVerTodos_Click);
             // 
             // FormJornada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(852, 666);
+            this.Controls.Add(this.btnVerTodo);
+            this.Controls.Add(this.btnVerTodos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gbProgramacion);
             this.Controls.Add(this.grid);
@@ -223,5 +278,9 @@
         private System.Windows.Forms.Button btnProgramar;
         private System.Windows.Forms.Button btnMasivo;
         private System.Windows.Forms.DataGridView grid;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbArea;
+        private System.Windows.Forms.Button btnVerTodo;
+        private System.Windows.Forms.Button btnVerTodos;
     }
 }

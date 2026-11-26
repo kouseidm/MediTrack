@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.gbDatos = new System.Windows.Forms.GroupBox();
             this.lblPersonal = new System.Windows.Forms.Label();
@@ -48,10 +48,6 @@
             this.cmbFiltro = new System.Windows.Forms.ComboBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.grid = new System.Windows.Forms.DataGridView();
-            this.btnVerPendientes = new System.Windows.Forms.Button();
-            this.btnRechazados = new System.Windows.Forms.Button();
-            this.btnAprobados = new System.Windows.Forms.Button();
-            this.btnVerTodo = new System.Windows.Forms.Button();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
@@ -239,29 +235,29 @@
             this.grid.AllowUserToAddRows = false;
             this.grid.AllowUserToDeleteRows = false;
             this.grid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grid.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grid.DefaultCellStyle = dataGridViewCellStyle3;
             this.grid.EnableHeadersVisualStyles = false;
             this.grid.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.grid.Location = new System.Drawing.Point(8, 279);
@@ -270,78 +266,14 @@
             this.grid.ReadOnly = true;
             this.grid.RowHeadersVisible = false;
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid.Size = new System.Drawing.Size(940, 321);
+            this.grid.Size = new System.Drawing.Size(940, 352);
             this.grid.TabIndex = 26;
-            // 
-            // btnVerPendientes
-            // 
-            this.btnVerPendientes.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnVerPendientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVerPendientes.FlatAppearance.BorderSize = 0;
-            this.btnVerPendientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerPendientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnVerPendientes.Location = new System.Drawing.Point(784, 606);
-            this.btnVerPendientes.Name = "btnVerPendientes";
-            this.btnVerPendientes.Size = new System.Drawing.Size(157, 21);
-            this.btnVerPendientes.TabIndex = 28;
-            this.btnVerPendientes.Text = "PENDIENTES";
-            this.btnVerPendientes.UseVisualStyleBackColor = false;
-            this.btnVerPendientes.Click += new System.EventHandler(this.btnVerPendientes_Click);
-            // 
-            // btnRechazados
-            // 
-            this.btnRechazados.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnRechazados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRechazados.FlatAppearance.BorderSize = 0;
-            this.btnRechazados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRechazados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnRechazados.Location = new System.Drawing.Point(621, 606);
-            this.btnRechazados.Name = "btnRechazados";
-            this.btnRechazados.Size = new System.Drawing.Size(157, 21);
-            this.btnRechazados.TabIndex = 29;
-            this.btnRechazados.Text = "RECHAZADOS";
-            this.btnRechazados.UseVisualStyleBackColor = false;
-            this.btnRechazados.Click += new System.EventHandler(this.btnRechazados_Click);
-            // 
-            // btnAprobados
-            // 
-            this.btnAprobados.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnAprobados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAprobados.FlatAppearance.BorderSize = 0;
-            this.btnAprobados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAprobados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnAprobados.Location = new System.Drawing.Point(458, 606);
-            this.btnAprobados.Name = "btnAprobados";
-            this.btnAprobados.Size = new System.Drawing.Size(157, 21);
-            this.btnAprobados.TabIndex = 30;
-            this.btnAprobados.Text = "APROBADOS";
-            this.btnAprobados.UseVisualStyleBackColor = false;
-            this.btnAprobados.Click += new System.EventHandler(this.btnAprobados_Click);
-            // 
-            // btnVerTodo
-            // 
-            this.btnVerTodo.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnVerTodo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVerTodo.FlatAppearance.BorderSize = 0;
-            this.btnVerTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerTodo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnVerTodo.Location = new System.Drawing.Point(8, 606);
-            this.btnVerTodo.Name = "btnVerTodo";
-            this.btnVerTodo.Size = new System.Drawing.Size(157, 21);
-            this.btnVerTodo.TabIndex = 31;
-            this.btnVerTodo.Text = "VER TODOS";
-            this.btnVerTodo.UseVisualStyleBackColor = false;
-            this.btnVerTodo.Click += new System.EventHandler(this.btnVerTodo_Click);
             // 
             // FormJustificaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(961, 641);
-            this.Controls.Add(this.btnVerTodo);
-            this.Controls.Add(this.btnAprobados);
-            this.Controls.Add(this.btnRechazados);
-            this.Controls.Add(this.btnVerPendientes);
+            this.ClientSize = new System.Drawing.Size(961, 643);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.btnRegistrar);
@@ -380,9 +312,5 @@
         private System.Windows.Forms.ComboBox cmbFiltro;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.DataGridView grid;
-        private System.Windows.Forms.Button btnVerPendientes;
-        private System.Windows.Forms.Button btnRechazados;
-        private System.Windows.Forms.Button btnAprobados;
-        private System.Windows.Forms.Button btnVerTodo;
     }
 }

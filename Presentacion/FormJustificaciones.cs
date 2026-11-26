@@ -112,32 +112,5 @@ namespace Presentacion
             UI.Resultado(error, aprobar ? "Justificación aprobada." : "Justificación rechazada.");
             CargarGrid();
         }
-
-
-        private void FiltrarPor(string estado)
-        {
-            cmbFiltro.SelectedItem = estado;  
-            CargarGrid();
-        }
-
-        private void btnVerTodo_Click(object sender, EventArgs e)
-        {
-            FiltrarPor("Todos");
-        }
-
-        private void btnAprobados_Click(object sender, EventArgs e)
-        {
-            FiltrarPor(NJustificacion.Aprobada);
-        }
-
-        private void btnRechazados_Click(object sender, EventArgs e)
-        {
-            FiltrarPor(NJustificacion.Rechazada);
-        }
-
-        private void btnVerPendientes_Click(object sender, EventArgs e)
-        {
-            FiltrarPor(NJustificacion.Pendiente);
-        }
     }
 }

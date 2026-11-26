@@ -31,6 +31,19 @@ namespace Negocio
             return lista.OrderByDescending(a => a.InicioProgramado).ToList();
         }
 
+        public List<RegistroAsistencia> ListarPorArea(int idArea)
+        {
+            List<int> personalDelArea = objDatosPersonal.ObtenerTodos()
+                .Where(p => p.IdArea == idArea)
+                .Select(p => p.Id)
+                .ToList();
+
+            return objDatosAsistencia.ObtenerTodos()
+                .Where(a => personalDelArea.Contains(a.IdPersonal))
+                .OrderByDescending(a => a.InicioProgramado)
+                .ToList();
+        }
+
         public string ProgramarJornada(RegistroAsistencia asistencia)
         {
             if (asistencia.IdPersonal <= 0)
@@ -102,12 +115,18 @@ namespace Negocio
             return ProgramarJornada(ArmarJornada(empleado, turno, fecha));
         }
 
-        public string ProgramarJornadaMasiva(DateTime fecha, out int programadas)
+        public string ProgramarJornadaMasiva(DateTime fecha, int idArea, out int programadas)
         {
             programadas = 0;
+            if (idArea <= 0)
+            {
+                return "Debe seleccionar un área.";
+            }
+
             List<Turno> turnos = objDatosTurno.ObtenerTodos();
 
-            foreach (Personal empleado in objDatosPersonal.ObtenerTodos().Where(p => p.Activo))
+            foreach (Personal empleado in objDatosPersonal.ObtenerTodos()
+                .Where(p => p.Activo && p.IdArea == idArea))
             {
                 Turno turno = turnos.FirstOrDefault(t => t.Id == empleado.IdTurno && t.Activo);
                 if (turno == null)
